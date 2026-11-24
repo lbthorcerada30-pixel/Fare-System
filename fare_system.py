@@ -12,9 +12,14 @@ class Vehicle(ABC):
         return self.__plate_number
     def set_plate_number(self, plate_number):
         self.__plate_number = plate_number
-    # TODO (Part 2): write get_capacity() and set_capacity(capacity).
-    # set_capacity only accepts a whole number greater than 0.
-    # Otherwise, print "Invalid capacity." and keep the old value.
+    def get_capacity(self):
+        return self.__capacity
+
+    def set_capacity(self, capacity):
+        if isinstance(capacity, int) and not isinstance(capacity, bool) and capacity > 0:
+        self.__capacity = capacity
+      else:
+        print("Invalid capacity.")
     @abstractmethod
     def compute_fare(self, distance_km):
         pass
