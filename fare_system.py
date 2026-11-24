@@ -1,5 +1,5 @@
 # CS3 Pair Assessment: Fare System
-# Authors: Lady Bielle T. Horcerada
+# Authors: Lady Bielle T. Horcerada, Rhoujan Jay P. Trinidad, Alexa Johanna E. Barraca
 # Section: 9-Sodium
 
 from abc import ABC, abstractmethod
@@ -40,8 +40,8 @@ class Jeepney(Vehicle):
             fare = 13.00 + (distance_km - 4) * 1.80
         return round(fare, 2)
 
-def describe(self):
-    return f"Jeepney {self.get_plate_number()} | Route: {self.get_route()} | Seats: {self.get_capacity()}"
+    def describe(self):
+        return f"Jeepney {self.get_plate_number()} | Route: {self.get_route()} | Seats: {self.get_capacity()}"
 # ===== Tricycle class (Developer B) =====
 # ===== Test code (Part 6 only) =====
 
